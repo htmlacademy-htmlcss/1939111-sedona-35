@@ -19,7 +19,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -51,6 +51,10 @@ body {
 
 .button-reset {
   background: none;
+}
+
+.button-liked {
+  background-color: #7db54f;
 }
 
 /* Pages */
