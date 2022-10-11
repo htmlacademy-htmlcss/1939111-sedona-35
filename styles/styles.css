@@ -20,6 +20,7 @@ body {
   line-height: 26px;
   color: #333333;
   background-color: #f2f2f2;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -40,23 +41,6 @@ body {
   border: none;
 }
 
-.button-brown {
-  background-color: #756157;
-}
-
-.button-small {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.button-reset {
-  background: none;
-}
-
-.button-liked {
-  background-color: #7db54f;
-}
-
 /* Pages */
 
 .title {
@@ -66,13 +50,7 @@ body {
   text-transform: uppercase;
 }
 
-.hotel-search-form {
-  background-color: #82B3D3;
-  color: #ffffff;
-  background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
+/* Navigation */
 
 .navigation-link {
   font-weight: 700;
@@ -81,6 +59,12 @@ body {
   color: #000000;
   text-decoration: none;
   text-align: center;
+}
+
+.navigation-button {
+  background-color: #756157;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 /* Hero-block */
@@ -134,6 +118,10 @@ body {
   text-align: center;
 }
 
+.hotel-search-button {
+  background-color: #756157;
+}
+
 /* Newsletter */
 .newsletter {
   text-align: center;
@@ -169,6 +157,14 @@ body {
 }
 
 /* Catalog */
+.hotel-search-form {
+  background-color: #82B3D3;
+  color: #ffffff;
+  background-image: url("../images/catalog-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
@@ -200,6 +196,17 @@ body {
   line-height: 21px;
 }
 
+.apply-button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.reset-button {
+  font-size: 16px;
+  line-height: 20px;
+  background: none;
+}
+
 /* Hotels list */
 .hotel-card {
   text-align: center;
@@ -222,6 +229,23 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.button-details {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
+}
+
+.button-to-favourites {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-in-favourites {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #7db54f;
 }
 
 /* Pagination */
