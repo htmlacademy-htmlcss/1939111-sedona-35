@@ -76,6 +76,11 @@ p {
   margin: 0 auto;
 }
 
+.header-logo {
+  width: 140px;
+  margin-right: 30px;
+}
+
 .navigation {
   display: flex;
   width: 1060px;
@@ -201,19 +206,29 @@ p {
 
 /* Catalog */
 .hotel-search-form {
-  background-color: #82B3D3;
+  box-sizing: border-box;
+  padding: 0 70px;
+
+  background-color: #82b3d3;
+  width: 1200px;
+  height: 412px;
   color: #ffffff;
   background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
 }
 
 /* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
@@ -222,10 +237,23 @@ p {
 }
 
 /* Catalog filters */
+.catalog-filter {
+  display: flex;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.catalog-filter-group {
+  margin-right: 70px;
+}
+
+.catalog-filter-list {
+  width: 150px;
+  height: 160px;
 }
 
 .control {
@@ -239,22 +267,57 @@ p {
   line-height: 21px;
 }
 
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+}
+
 .apply-button {
   font-size: 16px;
   line-height: 20px;
+  padding: 8px 50px;
 }
 
 .reset-button {
   font-size: 16px;
   line-height: 20px;
   background: none;
+  padding: 8px 50px;
 }
 
 /* Hotels list */
+.catalog-hotels {
+  box-sizing: border-box;
+  padding: 0 70px;
+
+  background-color: #ffffff;
+}
+
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .hotel-card {
   text-align: center;
   font-size: 18px;
   line-height: 21px;
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  margin-right: 17px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.hotel-card:nth-child(3n) {
+  margin-right: 0;
 }
 
 .hotel-card-link {
@@ -292,6 +355,13 @@ p {
 }
 
 /* Pagination */
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
 .pagination-link {
   text-decoration: none;
   color: #ffffff;
@@ -313,6 +383,7 @@ p {
 .newsletter {
   background-color: #ffffff;
   text-align: center;
+  min-height: 415px;
 }
 
 .newsletter-index-title {
@@ -320,7 +391,6 @@ p {
 }
 
 .newsletter-index {
-  min-height: 415px;
   background-color: #82b3d3;
   background-image: url("../images/footer-background.jpg");
   background-size: cover;
