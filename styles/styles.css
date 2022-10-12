@@ -14,12 +14,23 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+p {
   margin: 0;
 }
 
@@ -42,6 +53,14 @@ body {
 }
 
 /* Pages */
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .title {
   font-size: 30px;
@@ -51,6 +70,29 @@ body {
 }
 
 /* Navigation */
+.header-container {
+  width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  list-style: none;
+}
+
+.navigation-user {
+  max-width: 270px;
+  margin-left: auto;
+}
 
 .navigation-link {
   font-weight: 700;
@@ -69,21 +111,54 @@ body {
 
 /* Hero-block */
 .hero-block {
-  background-image: url("../images/hero-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  text-align: center;
+  min-height: 485px;
+  background-color: #4f6a51;
+  background-image: url("../images/hero-background-vector.svg"), url("../images/hero-background.jpg");
+  background-position: center bottom, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.welcome {
+  display: block;
+  margin: 0 auto;
 }
 
 .main-header {
   text-align: center;
+  background-color: #ffffff;
 }
 
-/* List */
+/* Advantages List */
 .advantages, .advices {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-list, .advices-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-item,
+.advantages-main,
+.advices-item {
+  height: 384px;
+  width: 400px;
+}
+
+.advantages-image img {
+  vertical-align: middle;
 }
 
 .advantages-item,
@@ -102,6 +177,7 @@ body {
 }
 
 .advantages-title, .advices-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -116,44 +192,11 @@ body {
 /* Search form */
 .hotel-search {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .hotel-search-button {
   background-color: #756157;
-}
-
-/* Newsletter */
-.newsletter {
-  text-align: center;
-}
-
-.newsletter-index-title {
-  color: #ffffff;
-}
-
-.newsletter-index {
-  background-color: #82b3d3;
-  background-image: url("../images/footer-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-
-.newsletter-field {
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-/* Footer contacts */
-.footer-contacts-address-phone {
-  color: #000000;
-  font-size: 40px;
-  line-height: 40px;
-  font-style: normal;
-  text-decoration: none;
 }
 
 /* Catalog */
@@ -237,12 +280,12 @@ body {
   background-color: #756157;
 }
 
-.button-to-favourites {
+.button-to-favorites {
   font-size: 16px;
   line-height: 20px;
 }
 
-.button-in-favourites {
+.button-in-favorites {
   font-size: 16px;
   line-height: 20px;
   background-color: #7db54f;
@@ -258,4 +301,58 @@ body {
 .pagination-current {
   background-color: #f2f2f2;
   color: #000000;
+}
+
+/* Footer */
+.page-footer-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Newsletter*/
+.newsletter {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.newsletter-index-title {
+  color: #ffffff;
+}
+
+.newsletter-index {
+  min-height: 415px;
+  background-color: #82b3d3;
+  background-image: url("../images/footer-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.newsletter-field {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+/* Footer contacts */
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-contacts-address-phone {
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  text-decoration: none;
 }
