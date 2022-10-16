@@ -66,7 +66,7 @@ p {
 }
 
 /* Pages */
-.main-container {
+main {
   flex-grow: 1;
 }
 
@@ -173,7 +173,7 @@ p {
   width: 400px;
 }
 
-.advantages-image img {
+.advantages-image {
   vertical-align: middle;
 }
 
@@ -385,7 +385,7 @@ p {
 }
 
 /* Footer */
-.page-footer-container {
+.page-footer {
   width: 1200px;
   margin: 0 auto;
 }
