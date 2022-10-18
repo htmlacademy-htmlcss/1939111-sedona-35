@@ -44,7 +44,7 @@
     <main class="main-inner">
       <div class="page-container">
         <section class="hotel-search-form">
-          <h1 class="inner-header-title title">Гостиницы Седоны</h1>
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a href="index.html" class="breadcrumbs-link">
@@ -113,23 +113,33 @@
           </form>
         </section>
 
-        <section class="catalog-hotels">
-          <div class="title catalog-title">Найдено гостиниц: <span class="search-result">38</span></div>
+        <section class="sorting">
+          <div class="title sorting-title">Найдено гостиниц: <span class="search-result">38</span></div>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать крупные карточки</span>
-          </a>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <ul class="sorting-list">
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+            </li>
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать крупные карточки</span>
+              </a>
+            </li>
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
+        <section class="catalog-hotels">
           <ul class="hotels-list">
             <li class="hotel-card">
               <a href="#" class="hotel-card-link">
@@ -207,7 +217,7 @@
               <a href="#" class="pagination-link">4</a>
             </li>
             <li class="pagination-item">
-              <span>...</span>
+              <a class="pagination-link pagination-show-more">...</a>
             </li>
             <li class="pagination-item">
               <a href="#" class="pagination-link">10</a>
