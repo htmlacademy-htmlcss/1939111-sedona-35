@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Sedona</title>
 
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header header-container">
+    <!-- Шапка -->
+    <header class="page-header">
       <nav class="navigation">
         <a href="#" class="navigation-logo">
           <img class="header-logo" src="images/header-icons/logo.svg" height="70" width="140" alt="Логотип городка Седоны">
@@ -17,7 +18,7 @@
             <a href="#" class="navigation-link navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">О седоне</a>
+            <a href="#about-the-city" class="navigation-link">О седоне</a>
           </li>
           <li class="navigation-item">
             <a href="catalog.html" class="navigation-link">Гостиницы</a>
@@ -43,24 +44,26 @@
 
     <main class="main-index">
       <div class="page-container">
+        <!-- Главный заголовок -->
         <h1 class="visually-hidden">Седона — небольшой городок в Аризоне</h1>
         <div class="hero-block">
+          <!-- Надпись "Welcome to Sedona..." -->
           <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
         </div>
 
         <div class="main-header">
-          <div class="title header-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</div>
+          <div class="title header-title" id="about-the-city">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</div>
           <p class="header-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
+        <!-- Преимущества и советы -->
         <div class="advantages-container">
+          <!-- Список преимуществ -->
           <section class="advantages">
             <h2 class="visually-hidden">Преимущества Седоны</h2>
 
             <div class="advantages-main">
               <h3 class="advantages-title advantages-main-title">Настоящий<br> городок</h3>
-              <p class="advantages-description advantages-main-description">Седона — не аттракцион для туристов, там течёт
-                своя
-                жизнь</p>
+              <p class="advantages-description advantages-main-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
 
             <img class="advantages-image" src="images/sedona.jpg" width="800" height="384" alt="Вид на город Седона">
@@ -88,7 +91,7 @@
                 разумеется</p>
             </div>
           </section>
-
+          <!-- Спосок советов - блоков с изображениями -->
           <section class="advices">
             <h2 class="visually-hidden">Рекоммендации</h2>
             <ul class="advices-list">
@@ -107,6 +110,7 @@
             </ul>
           </section>
         </div>
+        <!-- Поиск гостиницы в Седоне -->
         <section class="hotel-search">
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <div class="title hotel-search-title">Заинтересовались?</div>
@@ -115,9 +119,10 @@
           <a href="#" class="button hotel-search-button">Поиск гостиницы в Седоне</a>
         </section>
 
+        <!-- Форма с подпиской на рассылку -->
         <section class="newsletter newsletter-index">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <div class="title newsletter-index-title">Подпишитесь на рассылку</div>
+          <div class="title newsletter-title newsletter-index-title">Подпишитесь на рассылку</div>
           <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-field">Email</label>
@@ -129,6 +134,7 @@
       </div>
     </main>
 
+    <!-- Подвал -->
     <footer class="page-footer">
       <div class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>

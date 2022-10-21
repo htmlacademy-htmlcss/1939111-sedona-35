@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Каталог</title>
+    <title>Sedona. Каталог</title>
 
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header header-container">
+    <!-- Шапка -->
+    <header class="page-header">
       <nav class="navigation">
         <a href="index.html" class="navigation-logo">
           <img class="header-logo" src="images/header-icons/logo.svg" height="70" width="140" alt="Логотип городка Седоны">
@@ -44,7 +45,9 @@
     <main class="main-inner">
       <div class="page-container">
         <section class="hotel-search-form">
-          <h1 class="inner-header-title title">Гостиницы Седоны</h1>
+          <!-- Главный заголовок -->
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <!-- Хлебные крошки -->
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a href="index.html" class="breadcrumbs-link">
@@ -57,6 +60,7 @@
           </ul>
 
           <h2 class="visually-hidden">Список гостиниц Седоны с фильтрами</h2>
+          <!-- Фильтрация -->
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -113,23 +117,35 @@
           </form>
         </section>
 
-        <section class="catalog-hotels">
-          <div class="title catalog-title">Найдено гостиниц: <span class="search-result">38</span></div>
+        <!-- Сортировка -->
+        <section class="sorting">
+          <div class="title sorting-title">Найдено гостиниц: <span class="search-result">38</span></div>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать крупные карточки</span>
-          </a>
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <ul class="sorting-list">
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+            </li>
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать крупные карточки</span>
+              </a>
+            </li>
+            <li class="sorting-list-item">
+              <a class="sorting-list-button" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
+        <!-- Список карточек отелей -->
+        <section class="catalog-hotels">
           <ul class="hotels-list">
             <li class="hotel-card">
               <a href="#" class="hotel-card-link">
@@ -193,6 +209,7 @@
             </li>
           </ul>
 
+          <!-- Пагинация каталога -->
           <ul class="pagination">
             <li class="pagination-item">
               <a href="#" class="pagination-link pagination-current">1</a>
@@ -207,7 +224,7 @@
               <a href="#" class="pagination-link">4</a>
             </li>
             <li class="pagination-item">
-              <span>...</span>
+              <a class="pagination-link pagination-show-more">...</a>
             </li>
             <li class="pagination-item">
               <a href="#" class="pagination-link">10</a>
@@ -215,9 +232,10 @@
           </ul>
         </section>
 
+        <!-- Форма с подпиской на рассылку -->
         <section class="newsletter">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <div class="title">Подпишитесь на рассылку</div>
+          <div class="title newsletter-title">Подпишитесь на рассылку</div>
           <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-field">Email</label>
@@ -229,6 +247,7 @@
       </div>
     </main>
 
+    <!-- Подвал -->
     <footer class="page-footer">
       <div class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
