@@ -425,6 +425,8 @@ main {
 }
 
 .hotel-card {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-size: 18px;
   line-height: 21px;
@@ -433,7 +435,6 @@ main {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   box-sizing: border-box;
-
 }
 
 .hotel-card-link {
@@ -441,33 +442,68 @@ main {
   color: #000000;
 }
 
+.hotel-card-image {
+  padding-bottom: 16px;
+}
+
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-align: start;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.hotel-card-description {
+  display: grid;
+  grid-gap: 20px 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "type price"
+  "about like"
+  "rating rating";
+}
+
+.hotel-card-type {
+  grid-area: type;
+  justify-self: start;
+}
+
+.hotel-card-price {
+  grid-area: price;
+  justify-self: end;
+}
+
+.button-details {
+  grid-area: about;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
+}
+
+.button-favourites {
+  grid-area: like;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-in-favourites {
+  background-color: #7db54f;
+}
+
+.hotel-card-rating {
+  grid-area: rating;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hotel-rating {
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
-}
-
-.button-details {
-  font-size: 16px;
-  line-height: 20px;
-  background-color: #756157;
-}
-
-.button-to-favorites {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.button-in-favorites {
-  font-size: 16px;
-  line-height: 20px;
-  background-color: #7db54f;
+  padding: 9px 22px 8px 23px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 /* Пагинация каталога */
