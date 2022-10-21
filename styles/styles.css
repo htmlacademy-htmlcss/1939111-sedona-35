@@ -444,6 +444,8 @@ main {
 
 .hotel-card-image {
   padding-bottom: 16px;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .hotel-card-title {
