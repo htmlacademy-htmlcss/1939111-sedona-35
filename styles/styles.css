@@ -146,7 +146,6 @@ main {
 
 /* Баннер на главной странице */
 .hero-block {
-  min-height: 485px;
   background-color: #4f6a51;
   background-image: url("../images/hero-background-vector.svg"), url("../images/hero-background.jpg");
   background-position: center bottom, center;
@@ -201,8 +200,6 @@ main {
   align-items: center;
   padding: 0 85px;
   box-sizing: border-box;
-  max-height: 384px;
-  max-width: 400px;
 }
 
 .advantages-main {
@@ -260,6 +257,11 @@ main {
   color: #ffffff;
 }
 
+.advantages-description,
+.advices-description {
+  width: 230px;
+}
+
 /* Поиск гостиницы в Седоне */
 .hotel-search {
   text-align: center;
@@ -283,7 +285,6 @@ main {
 .hotel-search-form {
   padding: 35px 70px 70px;
   background-color: #82b3d3;
-  height: 412px;
   color: #ffffff;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
@@ -340,11 +341,6 @@ main {
   margin-right: 70px;
 }
 
-.catalog-filter-list {
-  width: 150px;
-  height: 160px;
-}
-
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
@@ -372,6 +368,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .sorting-title {
@@ -398,8 +395,11 @@ main {
 }
 
 .sorting-list-item {
-  width: 48px;
-  height: 48px;
+  min-width: 16px;
+  min-height: 14px;
+  padding: 17px 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
   margin-right: 8px;
 }
 
@@ -415,10 +415,11 @@ main {
 }
 
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   list-style: none;
-  padding: 0 0 20px 0;
+  padding: 0 0 40px 0;
   margin: 0;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -427,17 +428,12 @@ main {
   text-align: center;
   font-size: 18px;
   line-height: 21px;
-  height: 400px;
-  width: 300px;
+  width: 340px;
   padding: 20px;
-  margin-right: 17px;
-  margin-bottom: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-}
+  box-sizing: border-box;
 
-.hotel-card:nth-child(3n) {
-  margin-right: 0;
 }
 
 .hotel-card-link {
