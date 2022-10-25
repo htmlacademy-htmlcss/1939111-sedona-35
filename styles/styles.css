@@ -435,6 +435,14 @@ main {
   line-height: 21px;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs-item {
   position: relative;
   display: flex;
@@ -470,6 +478,7 @@ main {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #ffffff;
 }
 
 /* Фильтрация */
