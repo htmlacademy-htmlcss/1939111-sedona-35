@@ -85,6 +85,31 @@ p {
   cursor: default;
 }
 
+/* Общие стили для инпутов */
+
+.field {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.field:hover {
+  background-color: #e6e6e6;
+}
+
+.field:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.field:active {
+  border: 2px solid #000000;
+}
+
 /* Общие стили для заголовков */
 .title {
   font-size: 30px;
@@ -481,16 +506,175 @@ main {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-group {
+  padding: 0;
+  margin: 0;
   margin-right: 70px;
+  border: none;
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.control {
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  left: 0;
+  top: 1px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control:focus-within .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input {
+  position: relative;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  content: "";
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 10px;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f5e72;
+  left: 5px;
+  top: 5px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.range-input {
+  box-sizing: border-box;
+  width: 143px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 12px 40px 12px 20px;
+  border: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input-min {
+  border-radius: 4px 0px 0px 4px;
+  margin-right: 2px;
+}
+
+.range-input-max {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.filter-label-range {
+  position: relative;
+}
+
+.range-description {
+  position: absolute;
+  color: #000000;
+  opacity: 0.3;
+  font-size: 18px;
+  right: 20px;
+  top: 10px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 206px;
 }
 
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-left: auto;
 }
 
@@ -498,6 +682,7 @@ main {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
+  margin-top: 56px;
 }
 
 .reset-button {
@@ -554,6 +739,32 @@ main {
   font-size: 18px;
   line-height: 21px;
   margin-right: 70px;
+  padding-top: 14px;
+  padding-left: 20px;
+  padding-bottom: 14px;
+  width: 290px;
+  appearance: none;
+  background-image: url("../images/select-control.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border-color: #68a2ca;
+  outline: none;
+}
+
+.select-control:active {
+  border-color: #3f5e72;
+}
+
+.select-control:disabled {
+  border-color: #000000;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .sorting-list {
@@ -717,6 +928,26 @@ main {
   grid-area: rating;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-stars {
+  background-image: url("../images/star.svg");
+  height: 17px;
+  background-repeat: space;
+  background-position: right 0 center;
+}
+
+.hotel-stars-2 {
+  width: 42px;
+}
+
+.hotel-stars-3 {
+  width: 66px;
+}
+
+.hotel-stars-4 {
+  width: 84px;
 }
 
 .hotel-rating {
@@ -803,15 +1034,22 @@ main {
   color: #ffffff;
 }
 
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
 .newsletter-field {
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
+  width: 452px;
+  height: 52px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  border-radius: 4px 0 0 4px;
 }
 
 .newsletter-button {
+  height: 52px;
   border-radius: 0 4px 4px 0;
 }
 

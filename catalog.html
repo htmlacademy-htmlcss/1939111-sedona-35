@@ -70,20 +70,23 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="checkbox" class="control-input" name="pool" checked>
-                    Бассейн
+                    <input type="checkbox" class="control-input visually-hidden" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="checkbox" class="control-input" name="parking" checked>
-                    Парковка
+                    <input type="checkbox" class="control-input visually-hidden" name="parking" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="checkbox" class="control-input" name="wi-fi">
-                    Wi-Fi
+                    <input type="checkbox" class="control-input visually-hidden" name="wi-fi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -94,23 +97,52 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="radio" class="control-input" name="house-type" value="hotel" checked>
-                    Гостиница
+                    <input type="radio" class="control-input visually-hidden" name="house-type" value="hotel" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="radio" class="control-input" name="house-type" value="motel">
-                    Мотель
+                    <input type="radio" class="control-input visually-hidden" name="house-type" value="motel">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input type="radio" class="control-input" name="house-type" value="apartments">
-                    Апартаменты
+                    <input type="radio" class="control-input visually-hidden" name="house-type" value="apartments">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+              <div class="range">
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label filter-label-range">
+                    <input class="range-input range-input-min field" type="number" value="0" name="min-price">
+                    <span class="range-description">от</span>
+                  </label>
+                  <label class="catalog-filter-label filter-label-range">
+                    <input class="range-input range-input-max field" type="number" value="9000" name="max-price">
+                    <span class="range-description">до</span>
+                  </label>
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </fieldset>
 
             <div class="catalog-filter-buttons">
@@ -165,6 +197,7 @@
                 <button class="button button-favourites">В избранное</button>
                 <div class="hotel-card-rating">
                   <span class="visually-hidden">4 звезды</span>
+                  <span class="hotel-stars hotel-stars-4"></span>
                   <p class="hotel-rating">Рейтинг: 8,5</p>
                 </div>
               </div>
@@ -181,6 +214,7 @@
                 <button class="button button-favourites button-in-favourites">В избранном</button>
                 <div class="hotel-card-rating">
                   <span class="visually-hidden">4 звезды</span>
+                  <span class="hotel-stars hotel-stars-4"></span>
                   <p class="hotel-rating">Рейтинг: 9,2</p>
                 </div>
               </div>
@@ -197,6 +231,7 @@
                 <button class="button button-favourites">В избранное</button>
                 <div class="hotel-card-rating">
                   <span class="visually-hidden">3 звезды</span>
+                  <span class="hotel-stars hotel-stars-3"></span>
                   <p class="hotel-rating">Рейтинг: 6,9</p>
                 </div>
               </div>
@@ -213,6 +248,7 @@
                 <button class="button button-favourites">В избранное</button>
                 <div class="hotel-card-rating">
                   <span class="visually-hidden">2 звезды</span>
+                  <span class="hotel-stars hotel-stars-2"></span>
                   <p class="hotel-rating">Рейтинг: 5,0</p>
                 </div>
               </div>
@@ -249,7 +285,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-field">Email</label>
-            <input class="newsletter-field" id="newsletter-field" type="email" name="newsletter-email"
+            <input class="newsletter-field field" id="newsletter-field" type="email" name="newsletter-email"
                    placeholder="Ваш e-mail" required>
             <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
