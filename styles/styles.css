@@ -1279,7 +1279,7 @@ main {
 }
 
 .number-of-people-children .modal-search-label {
-  margin-right: 10px;
+  margin-right: 82px;
 }
 
 .number-of-people-field {
@@ -1342,18 +1342,60 @@ main {
   right: 10px;
 }
 
-.button-info {
+.modal-search-button {
+  grid-column: span 2;
+}
+
+/* Тултип */
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 59px;
+}
+
+.tooltip-toggle {
   font-size: 16px;
   width: 26px;
   height: 26px;
   border: none;
   border-radius: 50%;
-  margin-right: 46px;
   background-color: #83b3d3;
   color: #ffffff;
   cursor: pointer;
 }
 
-.modal-search-button {
-  grid-column: span 2;
+.tooltip-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 15px);
+  background-color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 15px 18px 18px 22px;
+  width: 216px;
+  display: none;
+}
+
+.tooltip-text::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  border: 9px solid transparent;
+  border-bottom: 9px solid #333333;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
