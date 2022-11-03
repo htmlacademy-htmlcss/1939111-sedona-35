@@ -19,10 +19,13 @@ html {
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: -15px 0 15px -15px #00000033,
+    15px 0 15px -15px #00000033;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -114,14 +117,6 @@ body {
 /* Страницы */
 main {
   flex-grow: 1;
-}
-
-/* Контейнер и боковые тени для всей страницы */
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-  box-shadow: -15px 0 15px -15px #00000033,
-  15px 0 15px -15px #00000033;
 }
 
 /* Главная навигация */
@@ -338,6 +333,7 @@ main {
 
 .advantages-image {
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .advantages-item,
@@ -689,14 +685,6 @@ main {
   cursor: pointer;
 }
 
-.range-toggle:active {
-  outline: 2px solid #83b3d3;
-}
-
-.range-toggle:focus {
-  outline: 2px solid #83b3d3;
-}
-
 .toggle-min {
   top: -8px;
   left: 0;
@@ -707,18 +695,26 @@ main {
   left: 206px;
 }
 
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #83b3d3;
+}
+
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 70px;
+  padding-top: 56px;
 }
 
 .apply-button {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
-  margin-top: 56px;
 }
 
 .reset-button {
@@ -981,7 +977,6 @@ main {
   background-image: url("../images/star.svg");
   height: 17px;
   background-repeat: repeat-x;
-  /*background-position: right 0 center;*/
 }
 
 .stars-wrapper {
