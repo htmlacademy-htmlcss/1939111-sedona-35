@@ -115,7 +115,7 @@ body {
 }
 
 /* Страницы */
-main {
+.main-container {
   flex-grow: 1;
 }
 
