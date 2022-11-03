@@ -641,6 +641,10 @@ main {
   position: relative;
 }
 
+.range-input-wrapper {
+  position: relative;
+}
+
 .range-input-wrapper::before {
   position: absolute;
   color: #000000;
