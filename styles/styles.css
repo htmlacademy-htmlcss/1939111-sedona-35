@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -54,7 +54,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -276,7 +276,8 @@ main {
 }
 
 /* Списки преимуществ и советов */
-.advantages, .advices {
+.advantages,
+.advices {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -287,7 +288,8 @@ main {
   flex-wrap: wrap;
 }
 
-.advantages-list, .advices-list {
+.advantages-list,
+.advices-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -354,7 +356,8 @@ main {
   color: #ffffff;
 }
 
-.advantages-title, .advices-title {
+.advantages-title,
+.advices-title {
   margin: 0;
   font-size: 24px;
   line-height: 28px;
@@ -545,6 +548,8 @@ main {
   position: relative;
   padding-left: 33px;
   cursor: pointer;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .control-mark {
@@ -624,12 +629,12 @@ main {
 }
 
 .range-input-min {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
   margin-right: 2px;
 }
 
 .range-input-max {
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
 }
 
 .filter-label-range {
@@ -753,11 +758,6 @@ main {
 .sorting-title {
   margin-right: auto;
   max-width: 400px;
-}
-
-.control {
-  font-size: 18px;
-  line-height: 23px;
 }
 
 .select-control {
@@ -894,8 +894,8 @@ main {
   grid-gap: 16px 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "type price"
-  "about like"
-  "rating rating";
+    "about like"
+    "rating rating";
 }
 
 .hotel-card-description .button {
