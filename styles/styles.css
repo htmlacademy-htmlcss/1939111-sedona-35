@@ -38,6 +38,7 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -120,7 +121,7 @@ main {
   width: 1200px;
   margin: 0 auto;
   box-shadow: -15px 0 15px -15px #00000033,
-    15px 0 15px -15px #00000033;
+  15px 0 15px -15px #00000033;
 }
 
 /* Главная навигация */
@@ -624,6 +625,7 @@ main {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -772,6 +774,7 @@ main {
   padding: 12px 50px 12px 18px;
   min-width: 290px;
   max-width: 400px;
+  -webkit-appearance: none;
   appearance: none;
   background-image: url("../images/select-control.svg");
   background-repeat: no-repeat;
@@ -908,18 +911,24 @@ main {
 }
 
 .hotel-card-type {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: type;
   justify-self: start;
   margin: 0;
 }
 
 .hotel-card-price {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: price;
   justify-self: end;
   margin: 0;
 }
 
 .button-details {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: about;
   font-size: 16px;
   line-height: 20px;
@@ -937,6 +946,8 @@ main {
 }
 
 .button-favourites {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: like;
   font-size: 16px;
   line-height: 20px;
@@ -957,6 +968,9 @@ main {
 }
 
 .hotel-card-rating {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: rating;
   display: flex;
   justify-content: space-between;
@@ -1158,6 +1172,7 @@ main {
 
 .footer-contacts-address-phone:focus,
 .footer-contacts-address-phone:hover {
+  outline: none;
   color: #756157;
 }
 
@@ -1181,6 +1196,10 @@ main {
   left: 0;
   margin: auto;
   fill: #000000;
+}
+
+.copyright-link:focus {
+  outline: none;
 }
 
 .copyright-link:focus .copyright-icon,
@@ -1336,6 +1355,7 @@ main {
 
 .number-of-people-field::-webkit-outer-spin-button,
 .number-of-people-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
