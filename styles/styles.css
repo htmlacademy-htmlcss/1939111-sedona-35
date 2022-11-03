@@ -107,7 +107,7 @@ p {
 }
 
 .field:active {
-  border: 2px solid #000000;
+  box-shadow: inset 0 0 0 2px #000000;
 }
 
 /* Общие стили для заголовков */
@@ -185,6 +185,18 @@ main {
   border-bottom: 2px solid #756257;
 }
 
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:hover .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-link:active {
+  opacity: 0.3;
+}
+
 .navigation-user {
   justify-content: flex-end;
   align-items: center;
@@ -213,9 +225,10 @@ main {
   content: "12";
   font-size: 10px;
   line-height: 10px;
+  letter-spacing: -0.1em;
   color: #ffffff;
   background-color: #7db54f;
-  padding: 5px;
+  padding: 5px 5px 5px 4px;
   border-radius: 50%;
   left: calc(50% - 11px/2 + 7px);
   top: calc(50% - 10px/2 - 11px);
@@ -449,6 +462,9 @@ main {
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
+  min-width: 12px;
+  min-height: 12px;
+  margin: auto;
 }
 
 .breadcrumbs-link:hover {
@@ -859,8 +875,7 @@ main {
   line-height: 28px;
   font-weight: 700;
   text-align: start;
-  margin: 0;
-  padding-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 .hotel-card-description {
@@ -1163,6 +1178,10 @@ main {
   width: 100%;
   height: 100%;
   z-index: 3;
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
