@@ -30,14 +30,6 @@ body {
   background-color: #f2f2f2;
 }
 
-.title {
-  font-weight: 700;
-}
-
-p {
-  margin: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -86,7 +78,6 @@ p {
 }
 
 /* Общие стили для инпутов */
-
 .field {
   box-sizing: border-box;
   font-family: inherit;
@@ -113,6 +104,7 @@ p {
 /* Общие стили для заголовков */
 .title {
   font-size: 30px;
+  font-weight: 700;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
@@ -123,38 +115,38 @@ main {
   flex-grow: 1;
 }
 
+/* Контейнер и боковые тени для всей страницы */
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: -15px 0 15px -15px #00000033,
+    15px 0 15px -15px #00000033;
 }
 
 /* Главная навигация */
 .page-header {
-  width: 1200px;
-  background-color: #fff;
-  margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .navigation {
+  position: relative;
   display: flex;
   width: 1060px;
-  height: 64px;
+  min-height: 64px;
   margin: 0 auto;
 }
 
 .navigation-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-right: 30px;
-  z-index: 1;
-}
-
-.header-logo {
-  width: 140px;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 0 0 170px;
   padding: 0;
   width: 450px;
   list-style: none;
@@ -200,7 +192,7 @@ main {
 .navigation-user {
   justify-content: flex-end;
   align-items: center;
-  max-width: 270px;
+  max-width: 350px;
   margin-left: auto;
 }
 
@@ -230,8 +222,8 @@ main {
   background-color: #7db54f;
   padding: 5px 5px 5px 4px;
   border-radius: 50%;
-  left: calc(50% - 11px/2 + 7px);
-  top: calc(50% - 10px/2 - 11px);
+  left: 21px;
+  top: 8px;
 }
 
 .navigation-button {
@@ -279,6 +271,10 @@ main {
   padding-bottom: 25px;
 }
 
+.header-description {
+  margin: 0;
+}
+
 /* Списки преимуществ и советов */
 .advantages, .advices {
   font-size: 18px;
@@ -293,6 +289,7 @@ main {
 
 .advantages-list, .advices-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin: 0;
   padding: 0;
@@ -304,15 +301,9 @@ main {
 .advices-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0 85px;
   box-sizing: border-box;
-}
-
-.advantages-main {
-  padding-top: 92px;
-  padding-bottom: 111px;
+  width: 400px;
 }
 
 .advantages-item {
@@ -357,6 +348,8 @@ main {
 }
 
 .advantages-main {
+  padding-top: 92px;
+  padding-bottom: 111px;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -400,14 +393,14 @@ main {
 
 .advantages-description,
 .advices-description {
-  width: 230px;
+  margin: 0;
 }
 
 /* Поиск гостиницы в Седоне */
 .hotel-search {
   text-align: center;
   background-color: #ffffff;
-  padding: 96px 0;
+  padding: 96px 70px;
 }
 
 .hotel-search-title {
@@ -484,12 +477,12 @@ main {
 .breadcrumbs-item:not(:first-child)::before {
   position: absolute;
   left: -20px;
-  top: 6px;
+  top: 7px;
   content: "";
-  border-right: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  width: 7px;
-  height: 7px;
+  border-right: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+  width: 6px;
+  height: 6px;
   transform: rotate(-45deg);
 }
 
@@ -522,14 +515,20 @@ main {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
+  padding: 0;
 }
 
 .catalog-filter-group {
   padding: 0;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 72px;
   border: none;
+}
+
+.catalog-filter-group-price {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .catalog-filter-list {
@@ -539,12 +538,12 @@ main {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 }
 
 .control {
   position: relative;
-  padding-left: 36px;
+  padding-left: 33px;
   cursor: pointer;
 }
 
@@ -603,7 +602,8 @@ main {
 
 .range-wrapper-inputs {
   display: flex;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
+  margin-top: 3px;
 }
 
 .range-input {
@@ -636,13 +636,21 @@ main {
   position: relative;
 }
 
-.range-description {
+.range-input-wrapper::before {
   position: absolute;
   color: #000000;
   opacity: 0.3;
   font-size: 18px;
-  right: 20px;
-  top: 10px;
+  right: 22px;
+  top: 12px;
+}
+
+.range-input-min-wrapper::before {
+  content: "от";
+}
+
+.range-input-max-wrapper::before {
+  content: "до";
 }
 
 .range-scale {
@@ -655,6 +663,7 @@ main {
 .range-bar {
   position: absolute;
   height: 4px;
+  width: 226px;
   background-color: #ffffff;
 }
 
@@ -691,7 +700,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: auto;
+  margin-left: 70px;
 }
 
 .apply-button {
@@ -743,6 +752,7 @@ main {
 
 .sorting-title {
   margin-right: auto;
+  max-width: 400px;
 }
 
 .control {
@@ -752,13 +762,12 @@ main {
 
 .select-control {
   color: #333333;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   margin-right: 70px;
-  padding-top: 14px;
-  padding-left: 20px;
-  padding-bottom: 14px;
-  width: 290px;
+  padding: 12px 50px 12px 18px;
+  min-width: 290px;
+  max-width: 400px;
   appearance: none;
   background-image: url("../images/select-control.svg");
   background-repeat: no-repeat;
@@ -785,6 +794,8 @@ main {
 
 .sorting-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 216px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -799,7 +810,7 @@ main {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   position: relative;
-  padding: 17px 16px;
+  padding: 15px 14px;
   min-width: 16px;
   min-height: 14px;
   cursor: pointer;
@@ -865,7 +876,7 @@ main {
 }
 
 .hotel-card-image {
-  padding-bottom: 16px;
+  margin-bottom: 10px;
   object-fit: contain;
   max-width: 100%;
 }
@@ -880,7 +891,7 @@ main {
 
 .hotel-card-description {
   display: grid;
-  grid-gap: 20px 16px;
+  grid-gap: 16px 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "type price"
   "about like"
@@ -895,11 +906,13 @@ main {
 .hotel-card-type {
   grid-area: type;
   justify-self: start;
+  margin: 0;
 }
 
 .hotel-card-price {
   grid-area: price;
   justify-self: end;
+  margin: 0;
 }
 
 .button-details {
@@ -949,8 +962,17 @@ main {
 .hotel-stars {
   background-image: url("../images/star.svg");
   height: 17px;
-  background-repeat: space;
-  background-position: right 0 center;
+  background-repeat: repeat-x;
+  /*background-position: right 0 center;*/
+}
+
+.stars-wrapper {
+  display: flex;
+  width: 140px;
+}
+
+.hotel-stars-1 {
+  width: 18px;
 }
 
 .hotel-stars-2 {
@@ -962,24 +984,32 @@ main {
 }
 
 .hotel-stars-4 {
-  width: 84px;
+  width: 90px;
+}
+
+.hotel-stars-5 {
+  width: 114px;
 }
 
 .hotel-rating {
+  box-sizing: border-box;
+  width: 140px;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
   padding: 9px 22px 8px 23px;
   background-color: #f2f2f2;
   border-radius: 4px;
+  margin: 0;
 }
 
 /* Пагинация каталога */
 .pagination {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 40px 0 60px;
   list-style: none;
-  display: flex;
 }
 
 .pagination-item:not(:last-child) {
@@ -989,8 +1019,8 @@ main {
 .pagination-link {
   box-sizing: border-box;
   display: block;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   text-align: center;
   line-height: 60px;
   text-decoration: none;
@@ -1024,7 +1054,7 @@ main {
 .newsletter {
   background-color: #ffffff;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 70px 104px;
 }
 
 .newsletter-title {
@@ -1032,9 +1062,7 @@ main {
 }
 
 .newsletter-description {
-  display: inline-block;
-  max-width: 475px;
-  margin-bottom: 54px;
+  margin: 0 0 54px 0;
 }
 
 .newsletter-index-title {
@@ -1056,7 +1084,6 @@ main {
 
 .newsletter-field {
   width: 452px;
-  height: 52px;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 20px;
@@ -1064,17 +1091,11 @@ main {
 }
 
 .newsletter-button {
-  height: 52px;
   border-radius: 0 4px 4px 0;
 }
 
 /* Подвал */
 .page-footer {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-contacts {
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
@@ -1270,11 +1291,11 @@ main {
 
 .message {
   position: absolute;
-  content: "Мы не можем отправить вас в прошлое.";
   left: 20px;
   bottom: -25px;
   font-size: 16px;
   line-height: 21px;
+  margin: 0;
 }
 
 .error-message {
@@ -1363,6 +1384,8 @@ main {
 
 .modal-search-button {
   grid-column: span 2;
+  min-height: 60px;
+  border-radius: 10px;
 }
 
 /* Тултип */
